@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>login</artifactId>
+    <name>Dyson :: AEM Login Parent</name>
+    <packaging>pom</packaging>
+    <groupId>com.dyson.digi</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+    <parent>
+        <artifactId>dyson</artifactId>
+        <groupId>com.dyson.digi</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <profiles>
+        <profile>
+            <id>login-custom</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>frontend</module>
+                <module>custom</module>
+            </modules>
+        </profile>
+    </profiles>
+
+    <repositories>
+        <repository>
+            <id>cyclones-upstreams--cyclones-upstreams</id>
+            <url>https://cyclones-upstreams-499604764704.d.codeartifact.eu-west-1.amazonaws.com/maven/cyclones-upstreams/</url>
+        </repository>
+        <repository>
+            <id>cyclones-maven-repository</id>
+            <url>${cyclones.maven.repository.third.party}</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+             <id>cyclones-upstreams--cyclones-upstreams</id>
+            <url>https://cyclones-upstreams-499604764704.d.codeartifact.eu-west-1.amazonaws.com/maven/cyclones-upstreams/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>cyclones-maven-repository</id>
+            <url>${cyclones.maven.repository.third.party}</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>cyclones-maven-repository</id>
+            <url>${cyclones.maven.repository.third.party}</url>
+        </repository>
+    </distributionManagement>
+</project>
