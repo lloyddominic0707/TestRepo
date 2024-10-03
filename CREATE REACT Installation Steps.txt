@@ -1,0 +1,11 @@
+Create designated folder for project.
+
+Open via VSC (Make sure to install VSC & Node.js
+
+Open terminal in the VSC.
+
+Create React App Installation (Commands for terminal): https://legacy.reactjs.org/docs/create-a-new-react-app.html
+
+npx create-react-app name-of-your-app
+cd name-of-your-app
+npm start
